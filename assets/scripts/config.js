@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: 'https://spokenerd-production.herokuapp.com',
+  production: 'https://spokenerd.herokuapp.com',
   development: 'http://localhost:4741'
 }
 
