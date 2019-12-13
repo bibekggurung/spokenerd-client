@@ -1,0 +1,36 @@
+{{#each words as |word|}}
+  {{log word}}
+  <section data-id="{{word.id}}">
+    <h6>Word:</h6>
+    <h3>
+      {{limit word.form 15}}
+    </h3>
+    <h6>Definition:</h6>
+    <p>
+      {{#if word.definition}}
+        {{word.definition}}
+      {{else}}
+        No definition provided.
+      {{/if}}
+    </p>
+    <h6>Part of Speech:</h6>
+    <p>
+      {{#if word.part_of_speech}}
+        {{word.part_of_speech}}
+      {{else}}
+        No part of speech provided.
+      {{/if}}
+    </p>
+    <h6>origin_lang:</h6>
+    <p>
+      {{#if word.origin_lang}}
+        {{word.origin_lang}}
+      {{else}}
+        No origin language provided.
+      {{/if}}
+    </p>
+    <button type="submit" class="btn btn-primary edit-word" data-id="{{word.id}}">Edit</button>
+    <button type="submit" class="btn btn-danger delete-word" data-id="{{word.id}}">Delete</button>
+  </section>
+
+{{/each}}

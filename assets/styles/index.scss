@@ -1,1 +1,41 @@
 @import '~bootstrap/scss/bootstrap';
+// @import 'theme';
+
+$black: #000;
+
+.border {
+  border: 3px solid $black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  font-size: 2em;
+}
+
+.failure {
+  background-color: red;
+  color: white;
+  font-size: 2em;
+}
+
+.after-auth {
+  display: none;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+}
