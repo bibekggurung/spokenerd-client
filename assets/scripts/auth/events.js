@@ -84,7 +84,6 @@ const addHandlers = event => {
   $('#edit-word').on('submit', onEditWord)
   $('#view-words').on('submit', onViewWords)
   $('.content').on('click', '.delete-word', onDeleteWord)
-  // $('.content').on('click', '.edit-word', onEditWord)
 }
 
 module.exports = {
