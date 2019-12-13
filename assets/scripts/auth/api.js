@@ -62,21 +62,14 @@ const getWords = () => {
   })
 }
 
-const editWord = (form, definition, partOfSpeech, originLang) => {
+const editWord = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/words/' + store.word.id,
+    url: config.apiUrl + '/words/' + data.word.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
-    data: {
-      word: {
-        form: form,
-        definition: definition,
-        part_of_speech: partOfSpeech,
-        origin_lang: originLang
-      }
-    }
+    data
   })
 }
 

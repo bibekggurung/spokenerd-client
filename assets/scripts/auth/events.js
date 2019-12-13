@@ -65,14 +65,15 @@ const onDeleteWord = (event) => {
     .catch(ui.failure)
 }
 
-// const onEditWord = (event) => {
-//   event.preventDefault()
-//   const form = event.target
-//   const formData = getFormFields(form)
-//   api.editWord(formData)
-//     .then(ui.onEditWordSuccess)
-//     .catch(ui.onEditWordFailure)
-// }
+const onEditWord = (event) => {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
+  console.log('Edit clicked')
+  api.editWord(formData)
+    .then(ui.onEditWordSuccess, 'success clicked')
+    .catch(ui.onEditWordFailure, 'fail click')
+}
 
 const addHandlers = event => {
   $('#sign-up').on('submit', onSignup)
@@ -80,6 +81,7 @@ const addHandlers = event => {
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#new-word').on('submit', onNewWord)
+  $('#edit-word').on('submit', onEditWord)
   $('#view-words').on('submit', onViewWords)
   $('.content').on('click', '.delete-word', onDeleteWord)
   // $('.content').on('click', '.edit-word', onEditWord)
