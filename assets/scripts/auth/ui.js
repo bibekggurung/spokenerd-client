@@ -39,13 +39,6 @@ const onChangePasswordFailure = () => {
   onFailure('You failed to change password.')
 }
 
-const onNewWordSuccess = (response) => {
-  onSuccess('New word added!')
-}
-
-const onNewWordFailure = () => {
-  onFailure('Word was not added.')
-}
 const onSignOutSuccess = () => {
   store.user = store
   onSuccess('See ya!')
@@ -58,22 +51,36 @@ const onSignOutFailure = () => {
   onFailure('You\'re still here.')
 }
 
-const onViewWordsSuccess = (response) => {
-  // showWordsTemplate({words:response.words})
+const onNewWordSuccess = (response) => {
+  onSuccess('New word added!')
   const showWordsHtml = showWordsTemplate({ words: response.words })
   $('.word-content').html(showWordsHtml)
-  console.log('clicked view words.', response.form)
 }
 
-// const onViewWordsSuccess = (data) => {
-//   console.log('showWordsTemplate is ', showWordsTemplate)
-//   const showWordsHtml = showWordsTemplate({ words: data.words })
-//   $('.content').html(showWordsHtml)
-// }
+const onNewWordFailure = () => {
+  onFailure('Word was not added.')
+}
+
+const onEditWordSuccess = (response) => {
+  onSuccess('Word edited!')
+}
+
+const onEditWordFailure = () => {
+  onFailure('Word was not edited.')
+}
+
+const onViewWordsSuccess = (response) => {
+  const showWordsHtml = showWordsTemplate({ words: response.words })
+  $('.word-content').html(showWordsHtml)
+}
 
 const onViewWordsFailure = () => {
   onFailure('Sorry! Try again.')
 }
+
+// const clearWords = () => {
+//   $('.content').empty()
+// }
 
 module.exports = {
   onSignInFailure,
@@ -87,5 +94,7 @@ module.exports = {
   onViewWordsSuccess,
   onViewWordsFailure,
   onNewWordSuccess,
-  onNewWordFailure
+  onNewWordFailure,
+  onEditWordSuccess,
+  onEditWordFailure
 }

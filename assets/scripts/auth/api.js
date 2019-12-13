@@ -62,7 +62,7 @@ const getWords = () => {
   })
 }
 
-const updateWord = (form, definition, partOfSpeech, originLang) => {
+const editWord = (form, definition, partOfSpeech, originLang) => {
   return $.ajax({
     url: config.apiUrl + '/words/' + store.word.id,
     method: 'PATCH',
@@ -95,7 +95,7 @@ module.exports = {
   signIn,
   signOut,
   changePassword,
-  updateWord,
+  editWord,
   newWord,
   getWords,
   deleteWord

@@ -50,7 +50,7 @@ const onNewWord = (event) => {
     .catch(ui.onNewWordFailure)
 }
 
-const onViewWords = (words) => {
+const onViewWords = (event) => {
   event.preventDefault()
   api.getWords()
     .then(ui.onViewWordsSuccess)
@@ -65,6 +65,15 @@ const onDeleteWord = (event) => {
     .catch(ui.failure)
 }
 
+// const onEditWord = (event) => {
+//   event.preventDefault()
+//   const form = event.target
+//   const formData = getFormFields(form)
+//   api.editWord(formData)
+//     .then(ui.onEditWordSuccess)
+//     .catch(ui.onEditWordFailure)
+// }
+
 const addHandlers = event => {
   $('#sign-up').on('submit', onSignup)
   $('#sign-in').on('submit', onSignIn)
@@ -73,6 +82,7 @@ const addHandlers = event => {
   $('#new-word').on('submit', onNewWord)
   $('#view-words').on('submit', onViewWords)
   $('.content').on('click', '.delete-word', onDeleteWord)
+  // $('.content').on('click', '.edit-word', onEditWord)
 }
 
 module.exports = {
