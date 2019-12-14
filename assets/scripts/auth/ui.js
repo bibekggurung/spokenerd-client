@@ -78,8 +78,9 @@ const onViewWordsFailure = () => {
   onFailure('Sorry! Try again.')
 }
 
-// const clearWords = () => {
-//   $('.content').empty()
+// const clearWords = (response) => {
+//   const showWordsHtml = showWordsTemplate()
+//   $('.word-content').html(showWordsHtml)
 // }
 
 module.exports = {
@@ -97,4 +98,5 @@ module.exports = {
   onNewWordFailure,
   onEditWordSuccess,
   onEditWordFailure
+  // clearWords
 }

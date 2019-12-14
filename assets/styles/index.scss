@@ -3,6 +3,39 @@
 
 $black: #000;
 
+body {
+  background-color: #85E3FF;
+  display: grid;
+  min-height: 100vh;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+// h1 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+
+// h3 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+//
+// h5 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+
+h1, h5, {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+h3, h6, p {
+  font-family: 'Oswald', sans-serif;
+  color: black;
+}
+
 .border {
   border: 3px solid $black;
   margin: 20px;
@@ -25,17 +58,59 @@ $black: #000;
   display: none;
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
+.logo{
+ align-content: center;
+}
+// body {
+//   display: grid;
+//   min-height: 100vh;
+//   margin: auto;
+//   text-align: center;
+//   width: 50%;
+// }
+
+// body {
+//   display: grid;
+//   min-height: 100vh;
+// }
+//
+// body {
+//   display: grid;
+//   min-height: 100vh;
+// }
+
+#sign-up, #sign-in {
+  position: relative;
+  display: flex;
+  align-items: center; /* Not necessary but will center the items */
+  flex-direction: row; /* Not necessary but tells that they should be in a row */
+  justify-content: flex-start; /* Will align items to left on larger screens */
+  flex-wrap: wrap; /* Will allow the flex inputs to wrap on smaller screens */
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
+.entries {
+  position: relative;
+  display: flex;
+  align-items: center; /* Not necessary but will center the items */
+  flex-direction: row; /* Not necessary but tells that they should be in a row */
+  justify-content: flex-start; /* Will align items to left on larger screens */
+  flex-wrap: wrap; /* Will allow the flex inputs to wrap on smaller screens */
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
-}
+// #sign-up > * { /* You could give a class or element instead of asterix */
+//   margin: 0 10px 5px 0; /* Just to make it look nices */
+//   width: 25%; /* Width of text inputs, you could set them different from each other */
+//   min-width: 100px; /* Min width to wrap elements when small screen */
+//   flex: 1;
+// }
+//
+// #sign-up .cred-button {
+//   min-width: 0px; /* Do not use the min-width declared above */
+// }
+//
+// #sign-up .cred-button {
+//   max-height: 20px;
+//   flex: 0 0 20px; /* Keep the magnifying class proportioned/20px wide */
+//   min-width: 0px; /* Do not use the min-width declared above */
+//   margin: auto;
+// }

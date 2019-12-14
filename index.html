@@ -2,19 +2,20 @@
 <html>
 
 <head>
-  <title>The SpokeNerd</title>
+  <title>SpokeNerd</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+  <link rel='icon' href='assets/pics/logo.png' type='image/x-icon'/ >
+  <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
 <body>
-  <h1>The SpokeNerd</h1>
   <div id="message"></div>
+  <h1>SPOKENERD</h1>
+  <div class="logo"><img src="assets/pics/logo.png" alt="Italian Trulli"></div>
   <section class="before-auth">
+    <div class="login-stuff">
     <h5>Create account</h5>
     <form id="sign-up">
       <input type="email" name="credentials[email]" placeholder="Email">
@@ -28,26 +29,37 @@
       <input type="password" name="credentials[password]" placeholder="Password">
       <button class="btn btn-primary">Submit</button>
     </form>
+  </div>
   </section>
   <section class="after-auth content">
-    <form id="new-word">
-      <input type="text" name="word[form]" placeholder="Word">
-      <input type="text" name="word[definition]" placeholder="Definition">
-      <input type="text" name="word[part_of_speech]" placeholder="Part of speech">
-      <input type="text" name="word[origin_lang]" placeholder="Origin Language">
-      <button class="btn btn-primary">Add word</button>
+    <div id="navbar" class="sticky-top">
+    <form id="view-words">
+      <button type="submit" class="btn btn-primary">View words!</button>
     </form>
-    <form id="edit-word">
+    <!-- <form id="clear-words">
+      <button type="submit" id="clearWordsButton" class="btn btn-outline-info">Clear Books!</button>
+    </form> -->
+    </div>
+    <div class="word-content"></div>
+    <div class="entries">
+    <form id="new-word">
+    <input type="text" name="word[form]" placeholder="Word">
+    <input type="text" name="word[definition]" placeholder="Definition">
+    <input type="text" name="word[part_of_speech]" placeholder="Part of speech">
+    <input type="text" name="word[origin_lang]" placeholder="Origin Language">
+    <input type="text" name="word[id]" placeholder="Word ID(For edits only)">
+    <button class="btn btn-primary">Add word</button>
+    <button type="submit" class="btn btn-primary edit-word" data-id="">Edit word</button>
+  </form>
+    <!-- <form id="edit-word">
       <input type="text" name="word[form]" placeholder="Word">
       <input type="text" name="word[definition]" placeholder="Definition">
       <input type="text" name="word[part_of_speech]" placeholder="Part of speech">
       <input type="text" name="word[origin_lang]" placeholder="Origin Language">
       <input type="text" name="word[id]" placeholder="Word ID">
       <button type="submit" class="btn btn-primary edit-word" data-id="">Edit word</button>
-    </form>
-    <div class="word-content"></div>
-    <form id="view-words"><button type="submit" class="btn btn-primary">View words</button>
-    </form>
+    </form> -->
+    </div>
     <h5>Change Password</h5>
     <form id="change-password">
       <input type="text" name="passwords[old]" placeholder="Old password">
