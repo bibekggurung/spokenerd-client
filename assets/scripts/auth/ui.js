@@ -78,10 +78,9 @@ const onViewWordsFailure = () => {
   onFailure('Sorry! Try again.')
 }
 
-// const clearWords = (response) => {
-//   const showWordsHtml = showWordsTemplate()
-//   $('.word-content').html(showWordsHtml)
-// }
+const clearWords = () => {
+  $(word.id).empty()
+}
 
 module.exports = {
   onSignInFailure,
@@ -97,6 +96,6 @@ module.exports = {
   onNewWordSuccess,
   onNewWordFailure,
   onEditWordSuccess,
-  onEditWordFailure
-  // clearWords
+  onEditWordFailure,
+  clearWords
 }

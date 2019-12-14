@@ -57,10 +57,10 @@ const onViewWords = (event) => {
     .catch(ui.onViewWordsFailure)
 }
 
-// const onClearWords = (event) => {
-//   event.preventDefault()
-//   ui.clearWords()
-// }
+const onClearWords = (event) => {
+  event.preventDefault()
+  ui.clearWords()
+}
 
 const onDeleteWord = (event) => {
   event.preventDefault()
@@ -88,7 +88,7 @@ const addHandlers = event => {
   $('#new-word').on('submit', onNewWord)
   $('#edit-word').on('submit', onEditWord)
   $('#view-words').on('submit', onViewWords)
-  // $('#clearWordsButton').on('submit', onClearWords)
+  $('#clearWordsButton').on('submit', onClearWords)
   $('.content').on('click', '.delete-word', onDeleteWord)
 }
 
