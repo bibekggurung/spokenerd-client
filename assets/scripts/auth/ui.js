@@ -3,12 +3,12 @@ const store = require('../store')
 const showWordsTemplate = require('../templates/word-listing.handlebars')
 
 const onSuccess = message => {
-  $('#message').text(message).addClass('success').removeClass('failure')
+  $('#message').text(message).addClass('success').removeClass('failure').fadeIn(300).delay(1500).fadeOut(400)
   $('form').trigger('reset')
 }
 
 const onFailure = message => {
-  $('#message').text(message).addClass('failure').removeClass('success')
+  $('#message').text(message).addClass('failure').removeClass('success').fadeIn(300).delay(1500).fadeOut(400)
   $('form').trigger('reset')
 }
 
@@ -71,6 +71,7 @@ const onEditWordFailure = () => {
 
 const onViewWordsSuccess = (response) => {
   const showWordsHtml = showWordsTemplate({ words: response.words })
+  onSuccess('Success!')
   $('.word-content').html(showWordsHtml)
 }
 
@@ -78,9 +79,9 @@ const onViewWordsFailure = () => {
   onFailure('Sorry! Try again.')
 }
 
-// const clearWords = () => {
-//   $('.content').empty()
-// }
+const clearWords = () => {
+  $('.word-content').empty()
+}
 
 module.exports = {
   onSignInFailure,
@@ -96,5 +97,6 @@ module.exports = {
   onNewWordSuccess,
   onNewWordFailure,
   onEditWordSuccess,
-  onEditWordFailure
+  onEditWordFailure,
+  clearWords
 }

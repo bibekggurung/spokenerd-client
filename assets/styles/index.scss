@@ -3,6 +3,40 @@
 
 $black: #000;
 
+body {
+  background-color: #85E3FF;
+  display: grid;
+  min-height: 100vh;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+// h1 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+
+// h3 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+//
+// h5 {
+//   font-family: 'Oswald', sans-serif;
+//   color: white;
+// }
+
+h1, h5, {
+  font-family: 'Oswald', sans-serif;
+  color: white;
+}
+
+h3, h6, p {
+  font-family: 'Oswald', sans-serif;
+  color: black;
+}
+
 .border {
   border: 3px solid $black;
   margin: 20px;
@@ -10,32 +44,146 @@ $black: #000;
 }
 
 .success {
-  background-color: green;
+  border-radius: 25px;
+  background: #90eebf;
   color: white;
+  font-family: 'Oswald', sans-serif;
   font-size: 2em;
+  text-align: center;
 }
 
 .failure {
-  background-color: red;
+  border-radius: 25px;
+  background: #ee9090;
   color: white;
+  font-family: 'Oswald', sans-serif;
   font-size: 2em;
+  text-align: center;
 }
 
 .after-auth {
   display: none;
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
+.logo{
+ align-content: center;
+}
+// body {
+//   display: grid;
+//   min-height: 100vh;
+//   margin: auto;
+//   text-align: center;
+//   width: 50%;
+// }
+
+// body {
+//   display: grid;
+//   min-height: 100vh;
+// }
+//
+// body {
+//   display: grid;
+//   min-height: 100vh;
+// }
+
+#sign-up, #sign-in {
+  position: relative;
+  display: flex;
+  align-items: center; /* Not necessary but will center the items */
+  flex-direction: row; /* Not necessary but tells that they should be in a row */
+  justify-content: flex-start; /* Will align items to left on larger screens */
+  flex-wrap: wrap; /* Will allow the flex inputs to wrap on smaller screens */
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
+.entries {
+  position: relative;
+  display: flex;
+  align-items: center; /* Not necessary but will center the items */
+  flex-direction: row; /* Not necessary but tells that they should be in a row */
+  justify-content: flex-start; /* Will align items to left on larger screens */
+  flex-wrap: wrap; /* Will allow the flex inputs to wrap on smaller screens */
 }
 
-body {
-  display: grid;
-  min-height: 100vh;
+// #sign-up > * { /* You could give a class or element instead of asterix */
+//   margin: 0 10px 5px 0; /* Just to make it look nices */
+//   width: 25%; /* Width of text inputs, you could set them different from each other */
+//   min-width: 100px; /* Min width to wrap elements when small screen */
+//   flex: 1;
+// }
+//
+// #sign-up .cred-button {
+//   min-width: 0px; /* Do not use the min-width declared above */
+// }
+//
+// #sign-up .cred-button {
+//   max-height: 20px;
+//   flex: 0 0 20px; /* Keep the magnifying class proportioned/20px wide */
+//   min-width: 0px; /* Do not use the min-width declared above */
+//   margin: auto;
+// }
+
+.container {
+  margin: auto;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  padding: 25px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 420px;
+  height: 300px;
+  border: 1px solid $black;
+  border-radius: 25px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  line-height: normal;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  border-radius: 25px;
+}
+
+#navbar {
+  display: inline-flex;
+}
+
+#view-words, #clear-words, {
+  margin: 10px;
 }
