@@ -88,7 +88,7 @@ const addHandlers = event => {
   $('#new-word').on('submit', onNewWord)
   $('#edit-word').on('submit', onEditWord)
   $('#view-words').on('submit', onViewWords)
-  $('#clearWordsButton').on('submit', onClearWords)
+  $('#clearWordsButton').on('click', onClearWords)
   $('.content').on('click', '.delete-word', onDeleteWord)
 }
 
