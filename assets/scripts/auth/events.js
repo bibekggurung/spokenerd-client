@@ -34,7 +34,6 @@ const onChangePassword = event => {
 
 const onSignOut = (event) => {
   event.preventDefault()
-  console.log('signed out.')
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
@@ -44,7 +43,6 @@ const onNewWord = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log('formData ', formData)
   api.newWord(formData)
     .then(ui.onNewWordSuccess)
     .catch(ui.onNewWordFailure)
@@ -74,7 +72,6 @@ const onEditWord = (event) => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log('Edit clicked')
   api.editWord(formData)
     .then(ui.onEditWordSuccess, 'success clicked')
     .catch(ui.onEditWordFailure, 'fail click')
